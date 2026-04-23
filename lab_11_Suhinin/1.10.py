@@ -1,0 +1,10 @@
+with open("source.txt", "r", encoding="utf-8")as s:
+    text = s.readlines()
+for line in text:
+    line1 = line.replace("\n", "")
+    line1 = line1.replace(" ", "")
+    line1 = line1.replace(".", "")
+    if len(line1) > 20:
+        with open("filtered.txt", "a")as f:
+            f.write(line)
+print("Виконано!")
